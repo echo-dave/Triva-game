@@ -9,7 +9,7 @@ $(document).ready(function () {
             [1867, 1994, 1776, 1819],
             ["Edison", "Bell","Galileo", "Da Vinci"]
         ],
-        Answers: [3, 1, 1, 2]
+        Answers: [3, 1, 0, 1]
 
     };
 
