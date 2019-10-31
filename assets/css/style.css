@@ -3,3 +3,85 @@
     display: table;
     clear: both;
   }
+
+  .center {
+    margin:0 auto;
+  }
+
+  .header {
+    font-size: 2.2em;
+    text-align: center;
+    color:white;
+    background: black;
+    padding:1em;
+  }
+
+  .header h1 {
+    max-width: 40rem;
+    text-align: center;
+    margin:0 auto;
+  }
+  .wrap {
+    width: 80%;
+    margin: 0 auto;
+  }
+.question {
+  margin-bottom:1.5em;
+  font-size: 2em;
+  text-align: center;
+}
+  .question :after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    background: black;
+    width:80%;
+    margin:1.5em auto;
+
+  }
+
+  #start {
+    margin-top: 1.5em;
+    font-size: 2em;
+    padding: 1em 2em;
+    display: block;
+    border-radius: .5em;
+  }
+ul {
+  display:inline-block;
+  margin:0 auto;
+}
+  .options li {
+    margin-bottom:.8em;
+    font-size: 1.8em;
+  }
+
+  li:hover {
+    cursor: pointer;
+    border-bottom: solid grey 1.5px;
+    display:list-item;
+  }
+
+.wrong, .answer {
+  border-radius: 1em;
+    padding: .5em;
+    margin:2em 0;
+    clear:both;
+    display: list-item;
+
+
+}
+
+#count {
+  font-size: 1.8em;
+  text-align: center;
+  margin:1.5em auto;
+}
+  .answer {
+    border: 3px green solid;
+  }
+
+  .wrong {
+    border: 3px red solid;
+  }
