@@ -2,12 +2,14 @@ $(document).ready(function () {
 
     //questions and answers object
     let qaObject = {
-        questions: ["Who wrote Hamlet?", "How many states are there in the U.S.?"],
+        questions: ["Who wrote Hamlet?", "How many states are there in the U.S.?", "When was Alaska sold to the U.S.?", "Who invented the telephone?"],
         options: [
             ["Allie McBeal", "Tom Clancy", "Heraldo Riviera", "Shakespear"],
-            [13, 50, 49, 47]
+            [13, 50, 49, 47],
+            [1867, 1994, 1776, 1819],
+            ["Edison", "Bell","Galileo", "Da Vinci"]
         ],
-        Answers: [3, 1]
+        Answers: [3, 1, 1, 2]
 
     };
 
