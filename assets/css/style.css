@@ -1,3 +1,9 @@
+body{
+  background:url("../img/trivia.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
 .clearfix:after {
     content: "";
     display: table;
@@ -24,6 +30,10 @@
   .wrap {
     width: 600px;
     margin: 0 auto;
+    background:rgba(255, 255, 255, 0.692);
+    padding: 2.5em;
+    border-radius: .25rem;
+
   }
 .question {
   margin-bottom:1.5em;
@@ -46,7 +56,9 @@
     font-size: 2em;
     padding: 1em 2em;
     display: block;
-    border-radius: .5em;
+    border-radius: 3em;
+    background: green;
+    color:white;
   }
 ul {
   display:inline-block;
