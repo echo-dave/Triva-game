@@ -70,6 +70,7 @@ $(document).ready(function () {
             // clearInterval(qTimer);
             console.log("wrong " + wrongCount);
             answerTimer();
+            
 
         }
 
@@ -103,7 +104,7 @@ function count() {
     counter -= 1;
     $('#count').html(counter);
     if (counter <= 0) {
-        clearInterval(countDown)
+        clearInterval(timerCounter)
     }
 }
     
