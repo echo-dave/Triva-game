@@ -23,23 +23,33 @@ $(document).ready(function () {
     let answer = "";
 
     //timer display counter
-    let counter = 0;
+    let counter = 0
+
+    //wrong answer timer
+    let aTimer;
 
     //question builder
     function startQuestions() {
+        clearTimeout(aTimer);
+        //insert question
         $('.question').html(qaObject.questions[qCount]);
+        //clear any previous answer options
         $('li').remove();
+
+        //build answer options
         for (let i = 0; i < qaObject.options[qCount].length; i++) {
             $('ul.options').append(`<li value="${i}">${qaObject.options[qCount][i]}</li>`)
         }
         let answer = qaObject.Answers[qCount];
         qCount += 1;
         counter = 30;
-        questionTimer()
+        questionTimer();
         countDown();
         $('li').on("click", function () {
-            // clearInterval(qTimer - question timer 30s);
+            // clearInterval( count down display) 
             clearInterval(timerCounter);
+            //clear qTimer - question timer 30s);
+            clearTimeout(qTimer);
 
             console.log($(this).attr("value"));
             if ($(this).attr("value") == answer) {
@@ -66,6 +76,7 @@ $(document).ready(function () {
         qTimer = setTimeout(timeout, 30000);
     }
     function timeout() {
+        clearTimeout(qTimer);
         wrongCount += 1;
         $(`li[value="${answer}"]`).addClass("answer");
 
@@ -108,7 +119,7 @@ $(document).ready(function () {
     function count() {
         counter -= 1;
         $('#count').html(counter);
-        if (counter <= 0) {
+        if (counter < 1) {
             clearInterval(timerCounter)
         }
     }
