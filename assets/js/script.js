@@ -40,7 +40,7 @@ $(document).ready(function () {
         for (let i = 0; i < qaObject.options[qCount].length; i++) {
             $('ul.options').append(`<li value="${i}">${qaObject.options[qCount][i]}</li>`)
         }
-        let answer = qaObject.Answers[qCount];
+        answer = qaObject.Answers[qCount];
         qCount += 1;
         counter = 30;
         questionTimer();
@@ -48,7 +48,6 @@ $(document).ready(function () {
         $('li').on("click", function () {
             // clearInterval( count down display) 
             clearInterval(timerCounter);
-            console.log("countdown " + timerCounter);
             //clear qTimer - question timer 30s);
             clearTimeout(qTimer);
 
