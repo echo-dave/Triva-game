@@ -59,7 +59,18 @@ body{
     border-radius: 3em;
     background: green;
     color:white;
+    transition: all .05s;
   }
+#start:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px 3px rgb(75, 74, 74);
+}
+
+#start:active {
+  transform: translate(1px, 1px);
+  color:black;
+}
+
 ul {
   display:inline-block;
   margin:0 auto;
