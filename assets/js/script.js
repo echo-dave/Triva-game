@@ -48,15 +48,17 @@ $(document).ready(function () {
         $('li').on("click", function () {
             // clearInterval( count down display) 
             clearInterval(timerCounter);
+            console.log("countdown " + timerCounter);
             //clear qTimer - question timer 30s);
             clearTimeout(qTimer);
 
-            console.log($(this).attr("value"));
+            console.log("this value " + $(this).attr("value"));
+            //correct answer
             if ($(this).attr("value") == answer) {
                 $(this).addClass("answer");
                 correctCount = correctCount + 1;
                 answerTimer();
-            }
+            } // wrong answer
             else {
                 $(this).addClass("wrong");
                 wrongCount += 1;
@@ -95,7 +97,7 @@ $(document).ready(function () {
         }
         else {
             $('.wrap').prepend(`<h1>correct: ${correctCount}, wrong: ${wrongCount}</h1>`)
-
+            $('li').off()
             //restart button
             // $('#restart').css("display", "inline-block");
             // $('#restart').on("click", resetGame());
@@ -121,6 +123,7 @@ $(document).ready(function () {
         $('#count').html(counter);
         if (counter < 1) {
             clearInterval(timerCounter)
+            counter = 0;
         }
     }
 
